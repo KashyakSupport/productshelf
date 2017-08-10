@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-// parseTemplate applies a given file to the body of the base template. // Spiderman
+// parseTemplate applies a given file to the body of the base template.
 func parseTemplate(filename string) *appTemplate {
 	tmpl := template.Must(template.ParseFiles("templates/base.html"))
 
@@ -30,13 +30,10 @@ type appTemplate struct {
 
 func (tmpl *appTemplate) Execute(w http.ResponseWriter, r *http.Request, data interface{}) *appError {
 	d := struct {
-		Data        interface{}
-		
+		Data interface{}
 	}{
-		Data:        data,
-
+		Data: data,
 	}
-
 
 	if err := tmpl.t.Execute(w, d); err != nil {
 		return appErrorf(err, "could not write template: %v")
