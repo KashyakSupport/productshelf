@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-// parseTemplate applies a given file to the body of the base template.
+// parseTemplate applies a given file to the body of the base template. // Spiderman
 func parseTemplate(filename string) *appTemplate {
 	tmpl := template.Must(template.ParseFiles("templates/base.html"))
 
