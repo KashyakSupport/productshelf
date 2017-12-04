@@ -20,7 +20,8 @@ import (
 	"github.com/gorilla/mux"
 	//"github.com/satori/go.uuid"
 
-	"github.com/GoogleCloudPlatform/golang-samples/getting-started/productshelf"
+	//"github.com/GoogleCloudPlatform/golang-samples/getting-started/productshelf"
+	"productshelf"
 	"google.golang.org/appengine"
 )
 
@@ -64,7 +65,8 @@ func registerHandlers() {
 // addFormHandler displays a form that captures details of a new book to add to
 // the database.
 func addFormHandler(w http.ResponseWriter, r *http.Request) *appError {
-	return editTmpl.Execute(w, r, nil)
+	return nil
+	//editTmpl.Execute(w, r, nil)
 }
 
 // bookFromForm populates the fields of a Book from form values
